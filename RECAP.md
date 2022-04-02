@@ -47,4 +47,39 @@ console.log(a / b);
 console.log("Hello " + myName);
 ```
 
-# 2.3
+# 2.3 const and let
+
+- const: 생성후 변수 업데이트 불가(고정값)
+- let : 생성후 변수 업데이트 가능하다
+- ~~var : 어디서든 변수 업데이트 가능 (값의 보호불가)~~
+- 기본적으로 const 사용하며, 업데이트가 허용되어야 하는 변수의 경우 let 사용
+- 규칙이 정해져 있기때문에 코드의 의미를 알기 쉽다
+
+```js
+const a = 10;
+const b = 5;
+let myName = "ian";
+```
+
+```js
+let a = b;
+let a = c;
+//재선언 금지
+
+let a = b;
+a = c;
+//재할당은 가능
+
+const a = b;
+const a = c;
+//재선언 금지
+
+const a = b;
+a = c;
+//재할당 금지
+
+var a = b;
+var a = c;
+a = d;
+//재선언, 재할당 가능
+```
