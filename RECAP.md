@@ -83,3 +83,10 @@ var a = c;
 a = d;
 //재선언, 재할당 가능
 ```
+
+# 2.4 Booleans
+
+- True: 참, on
+- False: 거짓, off
+- null: nothing, 비어있음을 의도적으로 표현
+- undefined: 변수는 존재 하지만, 값이 정의되지 않은 상태
