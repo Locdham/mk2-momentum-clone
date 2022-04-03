@@ -112,3 +112,23 @@ console.log(dayOfWeek[4]);
 //array에 일요일 추가하기..
 dyaOfWeek.push("sun");
 ```
+
+# 2.6 Objects
+
+- object는 property를 가진 데이터를 저장해주며, { } 를 사용한다.
+- 리스트 처럼 오브젝트에 추가하거나 업데이트를 할 수 있다.
+- 설명이 필요하지 않은 데이터 리스트들은 array로,
+- 설명이 필요한 정보가 담긴 데이터 리스트들은 object로!
+
+```js
+const player = {
+  name: "Son",
+  team: "Tottenham",
+  foot: "both",
+  speed: 100,
+  handsome: true,
+};
+
+player.backnumber = "7";
+console.log(player.backnumber);
+```

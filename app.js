@@ -1,9 +1,21 @@
-const dyaOfWeek = ["mon", "tue", "wed", "thu", "fri", "sat"];
+//손흥민 오브젝트 만들기
+const player = {
+  name: "Son",
+  team: "Tottenham",
+  foot: "both",
+  speed: 100,
+  handsome: true,
+};
 
-//array에서 항목 가져오기
-console.log(dyaOfWeek[5]);
+console.log(player);
+console.log(player.name);
 
-//array에 항목 추가하기
-dyaOfWeek.push("sun");
+//오브젝트 업데이트
+player.speed = 200;
+player.backnumber = "7";
 
-console.log(dyaOfWeek);
+console.log(player);
+
+player.speed = player.speed + 50;
+
+console.log(player.speed);
