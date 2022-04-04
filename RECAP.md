@@ -318,7 +318,7 @@ const powerResult = calculator.power(divideResult, minusResult);
 // return이 작동하여 값이 정해지면 그 함수는 끝남.
 ```
 
-# Conditional (조건문)
+# 2.13 Conditional (조건문)
 
 - 조건문은 true 인지 false 인지 알려주기 때문에 중요함
 - 뭔가를 확인해야 할 때 사용
@@ -334,3 +334,14 @@ isNaN() : not a number 라는 의미로, 숫자인지 아닌지 판별하여 tru
 === : 같음의 표시
 !== : 아님의 표시
 ```
+
+# 3.0 The Document Object
+
+- 자바스크립트를 사용하는 이유, HTML과의 상호작용을 위함
+- HTML의 element들을 자바스크립트로 변경하고 읽을수 있다
+- console 에 document 를 입력하면 내가 작성한 html을 가져올 수 있다
+- 즉 document는 브라우저에 이미 존재하는 object
+- JS는 HTML에 접근하고 읽을 수 있게 설정되어 있음
+- js를 통해 html를 바꿀 수도 있다. document.title = "HO";
+- 모든 것들은 document로부터 시작해. web site를 의미하기 때문.
+- document.body를 호출하면 body항목만 가지고 온다
