@@ -374,3 +374,22 @@ const title = document.querySelector("#hello form");
 const title = document.querySelectorAll(".hello h1");
 //쿼리셀렉터 함수를 사용하여 클래스.hello 의 h1을 명시함
 ```
+
+# 3.3 Events
+
+- JS에서 대부분 작업할 일은, event 를 listen 하는 것.
+- 이벤트란?
+- 클릭 하거나, 마우스가 올라가도, 입력, 엔터를 누른다거나 등등..
+- 모든 event는 js가 listen할 수 있음
+- eventListener : event를 listen함 → js에게 무슨 event를 listen하고 싶은 지 알려줘야 함
+- title.addEventListener("click") : 누군가가 title을 click하는 것을 listen할 거임 → 무언가를 해줘야함
+
+```js
+const title = document.querySelector("div.hello:first-child h1");
+
+function handleTitleClick() {
+  console.log("title was clicked");
+}
+
+title.addEventListener("click", handleTitleClick);
+```
