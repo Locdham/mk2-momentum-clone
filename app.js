@@ -1,20 +1,23 @@
-//모든 기능의 계산기 만들기
 const calculator = {
   add: function (firstNumber, secondNumber) {
-    console.log(firstNumber + secondNumber);
+    return firstNumber + secondNumber;
   },
   minus: function (firstNumber, secondNumber) {
-    console.log(firstNumber - secondNumber);
+    return firstNumber - secondNumber;
   },
   divide: function (firstNumber, secondNumber) {
-    console.log(firstNumber / secondNumber);
+    return firstNumber / secondNumber;
   },
   multiple: function (firstNumber, secondNumber) {
-    console.log(firstNumber * secondNumber);
+    return firstNumber * secondNumber;
+  },
+  power: function (firstNumber, secondNumber) {
+    return firstNumber ** secondNumber;
   },
 };
 
-calculator.add(2, 1);
-calculator.minus(2, 1);
-calculator.divide(2, 1);
-calculator.multiple(4, 2);
+const plusResult = calculator.add(2, 3);
+const minusResult = calculator.minus(plusResult, 10);
+const multipleResult = calculator.multiple(10, minusResult);
+const divideResult = calculator.divide(multipleResult, plusResult);
+const powerResult = calculator.power(divideResult, minusResult);

@@ -269,3 +269,50 @@ calculator.minus(2, 1);
 calculator.divide(2, 1);
 calculator.multiple(4, 2);
 ```
+
+# 2.11 Return
+
+- 이제는 콘솔에 출력하려고 function 을 쓰지않을것
+- 대신 어떤 작업을 처리하고, 그결과를 return 하기위해 function을 사용할것
+- 이게 function이 function의 밖과 소통하는 방법
+- 무언가를 return 하면, 계산을 담당하는 function 의 코드는 return 값과 같아질것
+
+```js
+const age = 96;
+function calculateKrAge(ageOfForeigner) {
+  return ageOfForeigner + 2;
+}
+
+const krAge = calculateKrAge(age);
+
+console.log(krAge);
+```
+
+```js
+const calculator = {
+  add: function (firstNumber, secondNumber) {
+    return firstNumber + secondNumber;
+  },
+  minus: function (firstNumber, secondNumber) {
+    return firstNumber - secondNumber;
+  },
+  divide: function (firstNumber, secondNumber) {
+    return firstNumber / secondNumber;
+  },
+  multiple: function (firstNumber, secondNumber) {
+    return firstNumber * secondNumber;
+  },
+  power: function (firstNumber, secondNumber) {
+    return firstNumber ** secondNumber;
+  },
+};
+
+const plusResult = calculator.add(2, 3);
+const minusResult = calculator.minus(plusResult, 10);
+const multipleResult = calculator.multiple(10, minusResult);
+const divideResult = calculator.divide(multipleResult, plusResult);
+const powerResult = calculator.power(divideResult, minusResult);
+
+// console.log는 보여지기만 하는 그림의 떡. 꺼내 먹으려면 return필요
+// return이 작동하여 값이 정해지면 그 함수는 끝남.
+```
