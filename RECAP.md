@@ -91,7 +91,7 @@ a = d;
 - null: nothing, 비어있음을 의도적으로 표현
 - undefined: 변수는 존재 하지만, 값이 정의되지 않은 상태
 
-# 2.5 Arrays
+# 2.5 Arrays []
 
 - 데이터를 정리하는 법, 데이터를 나열
 - 하나의 변수안에 데이터의 list를 가지는것
@@ -113,7 +113,7 @@ console.log(dayOfWeek[4]);
 dyaOfWeek.push("sun");
 ```
 
-# 2.6 Objects
+# 2.6 Objects {}
 
 - object는 property를 가진 데이터를 저장해주며, { } 를 사용한다.
 - 리스트 처럼 오브젝트에 추가하거나 업데이트를 할 수 있다.
@@ -131,4 +131,141 @@ const player = {
 
 player.backnumber = "7";
 console.log(player.backnumber);
+```
+
+# 2.7 Function () part.01
+
+- 어떤 코드를 캡슐화해서 실행을 여러번 할 수 있다.
+
+```js
+function sayHello() {
+  console.log("Hellow world");
+}
+
+sayHello();
+sayHello();
+sayHello();
+```
+
+# 2.8 Function () part.02
+
+- arguments
+- 펑션의 괄호 안의 매개변수에서 아규먼트를 받아들일 수 있다.
+- 아규먼트는 하나만 받을 수 있는게 아니라 여러개를 받을 수 있음.
+- function의 값은 function 블럭 안에서만 존재한다.
+
+```js
+function sayHello(nameOfPerson, age) {
+  console.log("Hello my name is " + nameOfPerson + " I am " + age);
+}
+
+sayHello("nico", 15);
+sayHello("dal", 25);
+sayHello("lynn", 30);
+```
+
+```js
+function plus(firstNumber, secondNumber) {
+  console.log(firstNumber + secondNumber);
+}
+
+plus(8, 60);
+```
+
+```js
+const player = {
+  name: "son",
+  age: 29,
+  good: true,
+  sayHello: function (otherPersonName) {
+    console.log("halo" + otherPersonName + "nice to meet you");
+  },
+};
+
+console.log(player.name);
+
+player.sayHello("lynn");
+player.sayHello("ian");
+```
+
+# 2.10 Recap
+
+## 오브젝트
+
+- 의미가 있는 property를 저장하려고 할때
+- 연관되어 있는 property들을 그룹으로 묶어서 저장 할때
+- 자주쓰는 예시로..
+- 여느 변수를 만들때 처럼 같은 시작으로 player 오브젝트를 만들고
+- 어레이, 불리안, 텍스트 또는 null 을 갖는것 대신에
+
+```js
+const player = {
+  name: "ian",
+  age: 1,
+};
+
+console.log(player, console);
+player.female = true;
+console.log(player);
+```
+
+## Function(함수)
+
+- 반복적 코드 재생 가능
+- 특정 input을 기반으로 같은행동을 반복하게함
+- function의 목적은 여러가지 일을 같은 코드로 하기 위함
+
+```js
+function plus() {
+  console.log(2 + 2);
+}
+plus();
+
+// 여기서 발전 시키자면...
+// function 안에 데이터를 미리 넣어두는 것보다
+```
+
+```js
+function plus(firstNumber, secondNumber) {
+  console.log(firstNumber, secondNumber);
+}
+plus(213, 987);
+plus(34, 566);
+
+// function 밖에서 데이터를 넣게 하는게 효율적임
+// 순서를 지켜주는 것이 중요함
+// 이것이 function을 만들고 데이터를 받는법이다
+```
+
+```js
+// -5 하기
+function minusFive(firstNumber) {
+  console.log(firstNumber - 5);
+}
+minusFive(10);
+
+//이렇듯 firstNumber 같은 argument들은 설정된 function의 {}바디 안에서만 사용가능하다
+```
+
+```js
+//모든 기능의 계산기 만들기
+const calculator = {
+  add: function (firstNumber, secondNumber) {
+    console.log(firstNumber + secondNumber);
+  },
+  minus: function (firstNumber, secondNumber) {
+    console.log(firstNumber - secondNumber);
+  },
+  divide: function (firstNumber, secondNumber) {
+    console.log(firstNumber / secondNumber);
+  },
+  multiple: function (firstNumber, secondNumber) {
+    console.log(firstNumber * secondNumber);
+  },
+};
+
+calculator.add(2, 1);
+calculator.minus(2, 1);
+calculator.divide(2, 1);
+calculator.multiple(4, 2);
 ```
