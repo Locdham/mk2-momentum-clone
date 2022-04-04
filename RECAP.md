@@ -355,3 +355,22 @@ const title = document.getElementById("title");
 
 title.innerText = "change something";
 ```
+
+# 3.2 Searching for Elements
+
+- getElementsByClassName() - array로 반환
+- getElementsByTagName() - array로 반환
+- querySelector()
+- 쿼리셀렉터는 엘레멘트를 CSS 방식으로 검색할 수 있다
+- CSS selector 자체를 전달함
+- 쿼리셀렉터는 단 하나의 엘리멘트를 리턴해줌
+- 쿼리셀렉터를 사용할 때, 찾으려는 클래스안에 h1 이 많을수도 있지만,
+- 쿼리셀렉터는 가장 첫번째 엘레멘트만 가져온다
+- 모두 가져오고 싶을때는, querySelectorAll 를 하면 되지만, array로 가져오게됨
+
+```js
+const title = document.querySelector(".hello h1");
+const title = document.querySelector("#hello form");
+const title = document.querySelectorAll(".hello h1");
+//쿼리셀렉터 함수를 사용하여 클래스.hello 의 h1을 명시함
+```
