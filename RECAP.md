@@ -393,3 +393,9 @@ function handleTitleClick() {
 
 title.addEventListener("click", handleTitleClick);
 ```
+
+# 3.4 Event part 02
+
+- 사용가능한 이벤트 리슨 찾기
+- console.dir(title) 이용하여 오브젝트에 접근
+- 여러 property 중 이름앞에 "ON" 이 붙어있다면, 그것이 Event listener
