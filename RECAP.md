@@ -345,3 +345,13 @@ isNaN() : not a number 라는 의미로, 숫자인지 아닌지 판별하여 tru
 - js를 통해 html를 바꿀 수도 있다. document.title = "HO";
 - 모든 것들은 document로부터 시작해. web site를 의미하기 때문.
 - document.body를 호출하면 body항목만 가지고 온다
+
+# 3.1 HTML in Javascript
+
+- HTML 코드와 HTML element에 접근할 수 있다
+
+```js
+const title = document.getElementById("title");
+
+title.innerText = "change something";
+```
