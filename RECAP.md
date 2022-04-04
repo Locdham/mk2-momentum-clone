@@ -1,5 +1,6 @@
 # 2.0 First JS
 
+- js는 작은 괄호에서 큰괄호로, 위에서 아래로 실행된다
 - 바디 내부의 맨 밑줄에 등록 해야만 한다.
 
 ```js
@@ -315,4 +316,21 @@ const powerResult = calculator.power(divideResult, minusResult);
 
 // console.log는 보여지기만 하는 그림의 떡. 꺼내 먹으려면 return필요
 // return이 작동하여 값이 정해지면 그 함수는 끝남.
+```
+
+# Conditional (조건문)
+
+- 조건문은 true 인지 false 인지 알려주기 때문에 중요함
+- 뭔가를 확인해야 할 때 사용
+- ex)사용자가 로그인 되었다면, 무언가를 보여준다던지...
+- 키워드 : if & else
+
+```js
+parseInt: 문자(str) 에서 숫자(int) 로 변경 해주는 기능
+typeof(): 타입을 확인시켜줌
+isNaN() : not a number 라는 의미로, 숫자인지 아닌지 판별하여 true/false로 알려줌
+&& : and 조건 표시 - 두가지 조건 true 여야만 true!
+|| : or 조건 표시 - 한가지 조건만 true 여도 true!
+=== : 같음의 표시
+!== : 아님의 표시
 ```
