@@ -399,3 +399,17 @@ title.addEventListener("click", handleTitleClick);
 - 사용가능한 이벤트 리슨 찾기
 - console.dir(title) 이용하여 오브젝트에 접근
 - 여러 property 중 이름앞에 "ON" 이 붙어있다면, 그것이 Event listener
+
+# 3.5 More Events - Window.
+
+- window resize event
+- clipboard copy event
+- document에서 body,head,title 은 중요해서 언제든
+- ex) document.body 로 가져올수있지만
+- div나 h1 등 element 들은 querySelector getElementById등으로 찾아야한다.
+- ex) document.querySelector(“h1”);
+
+```js
+window.addEventListener("resize", handleWinddowResize);
+window.addEventListener("copy", handleWindowCopy);
+```
