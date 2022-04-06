@@ -1,29 +1,15 @@
-//Events -이벤트 listen-
+//
+// const loginForm = document.getElementById("loginForm");
+// const loginInput = loginForm.querySelector("input");
+// const loginButton = loginForm.querySelector("button");
 
-const h1 = document.querySelector("div.hello:first-child h1");
+// 위의 코드를 좀더 짧게 작성하자면..
+const loginInput = document.querySelector("#login-form input");
+const loginButton = document.querySelector("#login-form button");
 
-// 클릭시 컬러 변경 블루 - 레드
-
-// function handleWindowClick() {
-//   const clickedClass = "clicked";
-//   if (h1.className === clickedClass) {
-//     h1.className = "";
-//   } else {
-//     h1.className = clickedClass;
-//   }
-// }
-
-// function handleWindowClick() {
-//   const clickedClass = "clicked";
-//   if (h1.classList.contains(clickedClass)) {
-//     h1.classList.remove(clickedClass);
-//   } else {
-//     h1.classList.add(clickedClass);
-//   }
-// }
-
-function handleWindowClicked() {
-  h1.classList.toggle("clicked");
+// click event 적용할 것인데.. login button 과 연결할것임
+function onLoginBtnClick() {
+  console.log("hello", loginInput.value);
 }
 
-h1.addEventListener("click", handleWindowClicked);
+loginButton.addEventListener("click", onLoginBtnClick);

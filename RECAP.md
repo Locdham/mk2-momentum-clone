@@ -486,3 +486,7 @@ h1.addEventListener("click", handleWindowClick);
 - toggle function은 class name이 존재하는지 확인한다.
 - class name이 존재하면 toggle은 class name을 제거하고, class name이 존재하지 않으면 toggle은 class name을 추가한다.
 - 한번만 적기 때문에 const도 필요 없다. toggle은 버튼같은거다. 켜고끄고.
+
+# 4.0 Input Value
+
+- login-form 의 input 과 버튼에 클릭이벤트 감지하기
