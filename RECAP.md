@@ -504,3 +504,31 @@ h1.addEventListener("click", handleWindowClick);
 - 이제 우리의 관심사는 form 을 submit 하는것!!!
 - input이 form 안에 있어야만 html의 도움을 받을수 있고
 - 자동으로 form이 submit 되어 매번 페이지가 새로고침되는것이 싫다면..
+
+# 4.2 Events
+
+## js가 event object 정보를 담은채로 function을 호출함
+
+- 이제는 button 의 클릭여부 말고, form의 submit에 관심
+- submit 이라는 event 가 발생하는것을 파악하고 싶어
+- 새로고침이 일어나는 것은 form submit의 기본동작이다, 브라우저의 프로그래밍이 그렇게 된것
+- 그런 기본동작이 발생하지않도록 해보자
+- 모든 eventlistener function 의 첫번째 argument는 항상 지금일어난 일들에 대한 정보를 담는다
+- 우리는 argument 공간만 제공하면 된다
+- 그러면 js는 방금 일어난 event 에 대한 정보를 지닌 argument에 채워넣는다
+
+```js
+function onLoginSubmit(toamto) {
+  toamto.preventDefault();
+  console.log(toamto);
+}
+
+loginForm.addEventListener("submit", onLoginSubmit);
+```
+
+- tomato 에는 현재 서브밋된 정보들을 담고 있다
+- preventDefault() function은 어떤 event의 기본행동이든지 발생되지 않도록 막아줌
+- argument 자리에 ()빈공간으로 처리하면 어떤정보도 받지않겠다는건데
+- onLoginSubmit(toamto) 처럼 공간을 만들어주면 js에서 event를 채워줌
+- 예시로 토마토를 적어준것 일뿐
+- onLoginSubmit(event) 라고 코딩하는것이 관행
