@@ -490,3 +490,17 @@ h1.addEventListener("click", handleWindowClick);
 # 4.0 Input Value
 
 - login-form 의 input 과 버튼에 클릭이벤트 감지하기
+
+# 4.1 Form Submission
+
+- username 의 유효성 검사 하기
+- 인풋에 username이 비어있어도 안되고, 너무길어도 안된다
+- username.length : 문자열 string의 길이를 의미함
+- html 자체에서 유효성 검사를 할 수 있다. <form> </form> 안에서..
+- 인풋에 제대로된 값을 입력하면 새로고침이 실행되고 값이 사라진다.
+- 즉 웹사이트를 재시작 시키고있는것이다.
+- 그이유는 form 이 자동으로 submit 되고 있기때문이다.
+- 그래서 더이상 click에 신경을 쓰지않아도 된다는 말
+- 이제 우리의 관심사는 form 을 submit 하는것!!!
+- input이 form 안에 있어야만 html의 도움을 받을수 있고
+- 자동으로 form이 submit 되어 매번 페이지가 새로고침되는것이 싫다면..
