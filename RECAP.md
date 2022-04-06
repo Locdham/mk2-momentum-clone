@@ -448,3 +448,41 @@ window.addEventListener("copy", handleWindowCopy);
 - class를 추가할 때마다 js랑 css에서 업데이트를 계속 해야하니까
 - 우리가 해야하는건 js로 모든 class name을 변경하지 않는거다.
 - 이 sexy-font를 삭제하지 않고 clicked class를 변경하고 싶다는 것
+
+# 3.8
+
+- className / classList 두가지 옵션이 있음
+- className 은 그냥 모들것을 교체해버림, 이전의 class는 상관없이
+- classList - 클라스들의 목록으로 작업할 수 잇게 허용해줌
+- classList.contains()
+- classList.remove()
+- classList.add()
+
+```js
+function handleWindowClick() {
+  const clickedClass = "clicked";
+  if (h1.classList.contains(clickedClass)) {
+    h1.classList.remove(clickedClass);
+  } else {
+    h1.classList.add(clickedClass);
+  }
+}
+
+h1.addEventListener("click", handleWindowClick);
+```
+
+- toggle fuction
+- 클래스 네임이 존재하는 지확인하는 펑션
+- 클래스네임이 존재하면 토글은 클래스네임을 제거
+- 클래스네임이 존재하지 않다면 토글은 클래스네임을 추가
+- 기본적으로 토글은 위의 classList 코드를 구현
+- className은 모든걸 교체해버린다. 이전의 class들은 상관하지 않고 말야.
+- classList를 사용해야 해. class를 목록으로 작업할 수 있게끔 허용해.
+- classList에는 멋진 function들이 있어.
+- constains라는 function은 우리가 명시한 class가 HTML element의 class에 포함되어 있는지를 말해줘.
+- remove라는 function은 명시한 class name을 제거하고
+- add라는 function은 명시한 class name을 추가해.
+- 더 좋은 function이 존재한다.
+- toggle function은 class name이 존재하는지 확인한다.
+- class name이 존재하면 toggle은 class name을 제거하고, class name이 존재하지 않으면 toggle은 class name을 추가한다.
+- 한번만 적기 때문에 const도 필요 없다. toggle은 버튼같은거다. 켜고끄고.
