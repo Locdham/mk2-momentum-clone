@@ -552,3 +552,36 @@ loginForm.addEventListener("submit", onLoginSubmit);
 - 이 object는 handelLinkClick을 위한 eventlistener 함수 첫번째 아규먼트로 주어지게되
 - 우리는 인자의 자리 즉 공간만 제공해주면 됨
 - 우리가 해야할것은 받는것 뿐
+
+# 4.4 Getting Username
+
+## username 제출후 로그인 인사말 만들기
+
+- username을 제출하면 form 이 없어져야해
+- 이를 없애려면 두가지 옵션이 존재
+- html element를 제거하거나, CSS를 이용하여 숨기는것
+- CSS에 미리 hidden이라는 클래스를 만든다.
+
+```js
+ .hidden {
+ display:none
+ }
+```
+
+- 어떤 element에 .hidden 클래스명을 주면 그요소를 숨기게 한다
+- 물론 유저가 username을 제출 후 말이다
+- html에 greeting 클래스 추가하여 hidden 클래스를 붙여주고
+- 필요에 따라 제거/추가를 해주면서 원하는것을 출력하게 해준다
+- 클래스 네임이 사용이 많이 될때에는 클린코드를 위하여 변수로 지정해준다
+
+```js
+const HIDDEN_CLASSNAME = "hidden";
+//대문자인 이유는, 관행이 그렇다 대문자로 표기하여 단순 변수지정임을 알려준다
+```
+
+- 문자출력시 sting 과 변수를 합쳐서 출력해야할때 두가지 옵션이 존재
+
+```js
+greeting.innerText = "Hello " + username;
+greeting.innerText = `Hello ${username}`;
+```
