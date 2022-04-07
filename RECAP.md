@@ -532,3 +532,23 @@ loginForm.addEventListener("submit", onLoginSubmit);
 - onLoginSubmit(toamto) 처럼 공간을 만들어주면 js에서 event를 채워줌
 - 예시로 토마토를 적어준것 일뿐
 - onLoginSubmit(event) 라고 코딩하는것이 관행
+
+# 4.3 Event part 02
+
+- link 의 기본동작 - 다른페이지로 이동
+-
+- link.addEventListener("click", handelLinkClick);
+- Eventlistener를 만들고 거기에 함수를 줬다는걸 JS가 보면
+- JS는 누군가 링크를 클릭을 할때, 널 위해 함수를 실행시킴
+- 이 함수는 네가 실행하는게 아니야
+- handelLinkClick() 괄호를 추가하면 이함수는 한번만 실행하고 끝이야
+- 그래서 () 를 쓰지않아
+- JS에 함수의 이름만 주고 실행하는것은 JS의 몫이다
+- 하지만 우리는 가끔씩 기본동작을 막아야 할 필요가 있어
+- 뭐가 클릭됐는지, 어디가 클릭됐는지 정보가 필요할때
+- 그럴때 JS는 단순히 함수를 실행시키는것이 아니라
+- 함수를 실행시키는 동시에, 그 함수에 첫번째 인자(argument) 로 object를 넣어줄거야
+- 이 object에는 방금 일어난 event에 대한 정보가 담겨있지
+- 이 object는 handelLinkClick을 위한 eventlistener 함수 첫번째 아규먼트로 주어지게되
+- 우리는 인자의 자리 즉 공간만 제공해주면 됨
+- 우리가 해야할것은 받는것 뿐
