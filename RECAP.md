@@ -616,3 +616,13 @@ localStorage.removeItem("username");
 ```
 
 - 우리는 key & value 만 있으면 된다
+
+# 4.6 Loading Username
+
+- form 을 보여주기전에, addEventListener 하기전에 확인해줘야됨
+- 이때 localStorage 가 비어있으면 form을 보여주면서 지금까지 하던걸 하면됨
+- 하지만 localStorage 에 유저정보가 있으면 form을 보여주면 안되고
+- h1 요소를 보여줘야 함
+- 이제 localStorage에 유저정보의 유무를 확인해야함
+- 유저정보 유무를 어떻게 확인할까
+- 정답은 localStorage.getItem()
