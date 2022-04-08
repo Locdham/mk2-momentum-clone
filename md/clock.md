@@ -11,3 +11,20 @@
 setInterval(sayhello, 5000);
 //호출하려는 함수의 이름, 기다릴 시간 밀리세컨드로 표기
 ```
+
+# 5.1 TimeOut and Date
+
+- 지정시간 후 출력
+
+```js
+setTimeout(sayhello, 5000);
+```
+
+- new Date 오브젝트
+
+```js
+const date = new Date();
+getHours();
+getMinutes();
+getSecond();
+```
