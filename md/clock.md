@@ -21,6 +21,7 @@ setTimeout(sayhello, 5000);
 ```
 
 - new Date 오브젝트
+- 이 오브젝트를 호출하는 당시의 현재 날짜 및 시간 들을 알려줌
 
 ```js
 const date = new Date();
