@@ -585,3 +585,34 @@ const HIDDEN_CLASSNAME = "hidden";
 greeting.innerText = "Hello " + username;
 greeting.innerText = `Hello ${username}`;
 ```
+
+# 4.5 Saving Username
+
+## 입력한 username 저장하기
+
+- localStorage
+- 브라우저에 뭔가 저장할 수 있게 해줌, 가져다 쓸수도 있어
+- 개발자도구 - 어플리케이션 - 스토리지에 있어
+- 추후에 이것저것 저장하다 보면 스토리지가 채워짐 ex) key & value 항목
+- MDN 로컬스토리지 API를 살펴보면 여러가지 method 들이 존재
+- 그중에 setItem 을 활용하면 로컬스토리지에 정보를 저장할 수 있어
+
+```js
+localStorage.setItem("username", "nico");
+//                       key      value
+//이 한줄의 코드를 실행하면 로컬스토리지 데이테베이스에는 key/value 값으로 저장이됨
+```
+
+- 값을 저장하고난 후에는 저장데이터를 불러올수도 있어
+
+```js
+localStorage.getItem("username");
+```
+
+- 값을 삭제할수도 있다
+
+```js
+localStorage.removeItem("username");
+```
+
+- 우리는 key & value 만 있으면 된다

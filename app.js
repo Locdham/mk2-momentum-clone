@@ -9,6 +9,7 @@ function onLoginSubmit(event) {
   event.preventDefault(); //서브밋의 기본실행 새로고침을 막아주고
   loginForm.classList.add(HIDDEN_CLASSNAME); // 사용자가 이름을 입력하면 로그인폼에 .hidden 클래스를 추가하여 숨겨준다
   const username = loginInput.value; //유저네임 변수에 로그인인풋밸류 즉 입력될 사용자 이름을 받아준다
+  localStorage.setItem("username", username);
   greeting.innerText = "Hello " + username; //그리팅 변수에 innerText를 사용하여 로그인폼이 없어진후 인사말을 보여줌
   greeting.innerText = `Hello ${username}`;
   greeting.classList.remove(HIDDEN_CLASSNAME); //그리팅 클래스의 히든클래스를 지워주면 숨어잇던 h1태그가 보여지며 인사말 출력
