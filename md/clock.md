@@ -28,3 +28,25 @@ getHours();
 getMinutes();
 getSecond();
 ```
+
+# 5.2 Padstarts
+
+- 0,1,2..9 방식을 00,01,02..09 로 변경하려면
+
+```js
+"1".padStart(2, "0");
+("01");
+```
+
+- 원하는 문자열의 길이 : 2
+- 앞에 Start할 문자 : "0"
+- 즉. 원하는 문자열의 길이를 정하고, 앞에 붙어서 시작할 문자를 적어준다
+
+```js
+const Hours = String(date.getHours()).padStart(2, "0");
+const Minutes = String(date.getMinutes()).padStart(2, "0");
+const Seconds = String(date.getSeconds()).padStart(2, "0");
+
+//padStart 사용시 주의점..
+//getHours 등은 속성이 숫자여서 String() 으로 감싸준후 문자로 바꾼후 사용한다
+```
