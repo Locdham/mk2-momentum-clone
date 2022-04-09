@@ -3,12 +3,21 @@ const toDoForm = document.getElementById("todo-form");
 const toDoInput = toDoForm.querySelector("input");
 const toDoList = document.getElementById("todo-list");
 
+function deleteToDo(event) {
+  const li = event.target.parentElement;
+  li.remove();
+}
+
 //10.함수추가
 function paintToDo(newTodo) {
   const li = document.createElement("li");
   const span = document.createElement("span");
-  li.appendChild(span);
   span.innerText = newTodo;
+  const button = document.createElement("button");
+  button.innerText = "❌";
+  button.addEventListener("click", deleteToDo);
+  li.appendChild(span);
+  li.appendChild(button);
   toDoList.appendChild(li);
 }
 
@@ -36,3 +45,7 @@ toDoForm.addEventListener("submit", handleToDoSubmit);
 //13.이제 painTodo는 무엇을 추가해할지 알게 될거야
 //14.paintTodo 함수에 li를 만들고 html에 추가하자
 //15.toDoList.appendChild(li)
+//16.모든것을 append 하기전에 const button으로 삭제버튼 생성하기
+//17.button.innerText로 이모지 x 를 추가하자
+//18.button을 li에 추가하자
+//19.클릭-이벤트리스너 & function을 만들어서 삭제 버튼과 연결시키자

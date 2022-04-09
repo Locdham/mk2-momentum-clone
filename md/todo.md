@@ -60,3 +60,25 @@ li.appendChild(span);
 span.innerText = newTodo;
 toDoList.appendChild(li);
 ```
+
+# 7.2 Deleting Todo
+
+- todo를 삭제하는 버튼을 추가할 것
+
+- 코드 정리하자면,
+- li를 만들고
+- span을 만들고
+- span의 텍스트를 변경해주고
+- button을 만들고
+- button의 텍스트를 변경해주었어
+- span을 li의 자식으로 넣어주고
+- button도 li의 자식으로 넣어줫지
+- 기억해 append는 맨 마지막줄들에 코딩해줘야함
+- button은 span 뒤에 놓고
+- 그후, li를 toDoList에 추가한다
+
+```js
+const li = event.target.parentElement;
+//삭제버튼을 눌렀을때 이벤트의 정보만으로 알수가 없다.
+//event.target.parentElement 순으로 정보를 알아내어, 해당 클릭의 부모인 li를 지운다
+```
