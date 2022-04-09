@@ -30,3 +30,33 @@ const nweTodo = toDoInput.value;
 toDoInput.value = "";
 // newTodo 변수에는 비워지기 전에 값이 복사 되어있기 때문에 이후에 얼마든지 사용가능하다
 ```
+
+# 7.1 Adding Todo
+
+- 아래와 같이 만드려고 한다
+
+```html
+<ul id="todo-list">
+  <li>
+    <span></span>
+    <button></button>
+  </li>
+</ul>
+```
+
+- js로 위와같이 요소를 만들기 위해
+
+```js
+const li = document.createElement("li");
+const span = document.createElement("span");
+li.appendChild(span);
+//li에 span 자식을 갖게 해주기
+```
+
+- newTodo 밸류를 span에 추가해주기
+- ul인 toDoList에 appendChild 하여 (li) 넣어주기
+
+```js
+span.innerText = newTodo;
+toDoList.appendChild(li);
+```
