@@ -10,5 +10,11 @@ bgImage.src = `img/${choiceImage}`;
 // html에 요소를 만들어내고 랜덤함수에 따라 이미지 랜덤픽되어 요소에 추가
 ```
 
-- appendChild() : body에 html을 추가한다는 의미
+- appendChild() :
+- body에 html을 추가한다는 의미
+- body의 맨아랫단에 위치하여 추가됨
+-
+- prepend() :
+- body에 html을 추가한다는 의미
+- body의 맨윗단에 위치하여 추가됨
 -
