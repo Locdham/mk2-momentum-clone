@@ -3,12 +3,14 @@ const toDoForm = document.getElementById("todo-form");
 const toDoInput = toDoForm.querySelector("input");
 const toDoList = document.getElementById("todo-list");
 
+const TODOS_KEY = "toDos";
+
 //20.저장공간인 toDos array 생성
 const toDos = [];
 
 //22.저장역할의 saveToDos 함수 생성 (key, value)
 function saveToDos() {
-  localStorage.setItem("toDos", JSON.stringify(toDos));
+  localStorage.setItem(TODOS_KEY, JSON.stringify(toDos));
 }
 
 function deleteToDo(event) {
@@ -41,6 +43,17 @@ function handleToDoSubmit(event) {
 
 // 3.submit 새로고침 막기 구동위한 이벤트 리스너 만들기
 toDoForm.addEventListener("submit", handleToDoSubmit);
+
+// function sayHello(item) {
+//   console.log("this is the turn of", item);
+// }
+
+const savedToDos = localStorage.getItem(TODOS_KEY);
+
+if (savedToDos !== null) {
+  const parsedToDos = JSON.parse(savedToDos);
+  parsedToDos.forEach(item => console.log("this is the turn of ", item));
+}
 
 //4.함수에 event 인자를 받아 event.preventDefault() 로 새로고침 방지
 //5.input에 들어오는 input value를 얻어내야함

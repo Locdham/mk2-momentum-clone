@@ -92,4 +92,35 @@ const li = event.target.parentElement;
 - localStorage에는 오직 텍스트만 저장할 수 있다
 - 하지만 array로 저장을 하고싶다면
 - JSON.stringify() 를 사용하자
--
+- 모든값을 string으로 바꾸고 저장하고 싶을때 사용
+- JSON.parse()
+- 모든값을 array로 바꾸고 저장 해줌
+
+```js
+JSON.stringify(toDos);
+-'["a","b","c","d"]';
+
+JSON.parse(localStorage.getItem("toDos"));
+["a", "b", "c", "d"];
+```
+
+# 7.4 Loading Todo
+
+- 새로고침시 localStorage에 남아있으나 화면 출력은 안되는 문제
+- js는 array에 있는 각각의 item에 대해 function을 실행할 수 있게 해줌
+- forEach는 해당 array에 있는 item에 대해서 설정한 function을 실행할 수 있게 해줘
+
+```js
+function sayHello(item) {
+  console.log("this turn off", item);
+}
+
+parsedTodos.forEach(sayHello);
+```
+
+- arrow function (화살표 함수)
+
+```js
+parsedToDos.forEach(item => console.log("this is the turn of ", item));
+//위처럼 함수를 생성하는 대신, array안의 각각 아이템에 대해 실행하라 의미
+```
