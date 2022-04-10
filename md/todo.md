@@ -192,3 +192,24 @@ function sexyFilter(toDos) {
 ```
 
 - .filter기능을 사용하면 array 안의 아이템들이 조건에 따라 True일경우, 화면에 리턴된다. flase일경우 삭제된다
+
+# 7.8 Deleting todo 03
+
+- 이제는 id가 있는 todo를 지울것임
+- filter 함수는 새로운 array로 반환된다
+- 예를들어, { text: "1", id: 1649570034453 } 이 아이디를 제외하고 array를 만들것임
+- 그리고 let toDos = []; 이 어레이를 업데이트 해야함
+- 왜냐면 toDos 가 localStorage에 저장되어 있으니까
+- toDos = parsedToDos; 이처럼 저장될때도 업데이트 되었으니
+- 삭제할때도 업데이트 코드가 필요해
+- 딜리트 함수로 가서
+- 클릭하는 li의 id를 갖고 잇는 todo를 지워야한다
+- 고로 toDo의 id가 li의 id와 다른걸 남기고 싶다
+- toDo.id 는 숫자이고, li.id는 타입이 문자 이기때문에
+- parseInt()로 숫자 변환해주자
+- 마지막으로 saveTodos()함수 호출해줘야 삭제한것도 저장이됨
+
+```js
+toDos = toDos.filter(toDo => toDo.id !== parseInt(li.id));
+saveToDos();
+```

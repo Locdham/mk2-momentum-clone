@@ -19,6 +19,8 @@ function saveToDos() {
 function deleteToDo(event) {
   const li = event.target.parentElement;
   li.remove();
+  toDos = toDos.filter(toDo => toDo.id !== parseInt(li.id));
+  saveToDos();
 }
 
 //10.화면에 todo를 그려줌
