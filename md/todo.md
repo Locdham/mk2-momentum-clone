@@ -175,3 +175,20 @@ li.id = newTodo.id;
 ```
 
 - 삭제를 위해 이제 우리가 누른 버튼의 id를 찾아야한다
+
+# 7.7 Deleting todo 02
+
+```js
+const toDos = [
+  { text: "1", id: 1649570034453 },
+  { text: "2", id: 1649570035569 },
+  { text: "3", id: 1649570036048 },
+  { text: "4", id: 1649570036487 },
+];
+
+function sexyFilter(toDos) {
+  return toDos.id !== 1649570034453;
+}
+```
+
+- .filter기능을 사용하면 array 안의 아이템들이 조건에 따라 True일경우, 화면에 리턴된다. flase일경우 삭제된다
