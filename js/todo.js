@@ -6,7 +6,10 @@ const toDoList = document.getElementById("todo-list");
 const TODOS_KEY = "toDos";
 
 //20.저장공간인 toDos array 생성
-const toDos = [];
+//비어있기 때문에 새로운 todo만 저장되는것이 문제
+//const 를 let으로 바꿔서 업데이트가 가능하도록 만들고
+// const toDos = [];
+let toDos = [];
 
 //22.저장역할의 saveToDos 함수 생성 (key, value)
 function saveToDos() {
@@ -18,7 +21,7 @@ function deleteToDo(event) {
   li.remove();
 }
 
-//10.함수추가
+//10.화면에 todo를 그려줌
 function paintToDo(newTodo) {
   const li = document.createElement("li");
   const span = document.createElement("span");
@@ -52,7 +55,8 @@ const savedToDos = localStorage.getItem(TODOS_KEY);
 
 if (savedToDos !== null) {
   const parsedToDos = JSON.parse(savedToDos);
-  parsedToDos.forEach(item => console.log("this is the turn of ", item));
+  toDos = parsedToDos;
+  parsedToDos.forEach(paintToDo);
 }
 
 //4.함수에 event 인자를 받아 event.preventDefault() 로 새로고침 방지

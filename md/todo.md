@@ -124,3 +124,18 @@ parsedTodos.forEach(sayHello);
 parsedToDos.forEach(item => console.log("this is the turn of ", item));
 //위처럼 함수를 생성하는 대신, array안의 각각 아이템에 대해 실행하라 의미
 ```
+
+# 7.5 Loading Todo 02
+
+- 비어있기 때문에 새로운 todo만 저장되는것이 문제
+- const 를 let으로 바꿔서 업데이트가 가능하도록 만들자
+
+```js
+const toDos = [];
+let toDos = [];
+```
+
+```js
+toDos = parsedToDos;
+저장된 이전의 todo들도 남아있게 해주며, array는 빈값이 아니게 된다
+```
