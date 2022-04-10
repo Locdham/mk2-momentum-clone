@@ -139,3 +139,39 @@ let toDos = [];
 toDos = parsedToDos;
 저장된 이전의 todo들도 남아있게 해주며, array는 빈값이 아니게 된다
 ```
+
+# 7.6 Deleting Todo
+
+- Todo를 지울때마다 localStorage 업데이트
+- todo들에게 ID를 부여
+
+```js
+//이렇게 만든다면..
+[{ id: 1234, text: "javascript" }];
+```
+
+- 랜덤으로 id를 생성하려면
+
+```js
+Date.now();
+1649568825304;
+//밀리초(1000/1초)를 주는 함수로서 램덤숫자를 얻기 좋다
+```
+
+- newToDoObj 를 생성하자
+- 아이디, 텍스트 정보 부여후, 변수 newTodoObject 사용한다
+
+```js
+const newTodoObject = {
+  text: newTodo,
+  id: Date.now(),
+};
+```
+
+- 이제 각 li마다 id가 부여된다
+
+```js
+li.id = newTodo.id;
+```
+
+- 삭제를 위해 이제 우리가 누른 버튼의 id를 찾아야한다
