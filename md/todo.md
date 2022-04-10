@@ -82,3 +82,14 @@ const li = event.target.parentElement;
 //삭제버튼을 눌렀을때 이벤트의 정보만으로 알수가 없다.
 //event.target.parentElement 순으로 정보를 알아내어, 해당 클릭의 부모인 li를 지운다
 ```
+
+# 7.3 Saving Todo
+
+- localStorage 를 이용한 todo 저장하기 위해
+- todo를 저장할 array를 만들자
+- newTodo가 그려질때 마다 그 텍스트를 array에 push 하자
+- 문제는 localStorage 에는 array를 저장할 수 없다
+- localStorage에는 오직 텍스트만 저장할 수 있다
+- 하지만 array로 저장을 하고싶다면
+- JSON.stringify() 를 사용하자
+-
